@@ -1,0 +1,12 @@
+:root {
+  --background-color: #FDFFFC;
+  --search-color: #F77F00;
+  --search-button-color: #FFDC00;
+  --table-header: #669BBC;
+  --table-row: #F5FBEF;
+  --footer-background: #FFF;
+  --footer-text: #000;
+  --header-text-color: #FFF;
+  --info-button-color: #4CAF50;
+  --info-button-color-text: #FFF;
+}

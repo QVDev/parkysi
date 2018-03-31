@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+  
+  <!-- Start of Async Drift Code -->
+  <script>
+  !function() {
+    var t;
+    if (t = window.driftt = window.drift = window.driftt || [], !t.init) return t.invoked ? void (window.console && console.error && console.error("Drift snippet included twice.")) : (t.invoked = !0, 
+    t.methods = [ "identify", "config", "track", "reset", "debug", "show", "ping", "page", "hide", "off", "on" ], 
+    t.factory = function(e) {
+      return function() {
+        var n;
+        return n = Array.prototype.slice.call(arguments), n.unshift(e), t.push(n), t;
+      };
+    }, t.methods.forEach(function(e) {
+      t[e] = t.factory(e);
+    }), t.load = function(t) {
+      var e, n, o, i;
+      e = 3e5, i = Math.ceil(new Date() / e) * e, o = document.createElement("script"), 
+      o.type = "text/javascript", o.async = !0, o.crossorigin = "anonymous", o.src = "https://js.driftt.com/include/" + i + "/" + t + ".js", 
+      n = document.getElementsByTagName("script")[0], n.parentNode.insertBefore(o, n);
+    });
+  }();
+  drift.SNIPPET_VERSION = '0.3.1';
+  drift.load('ig7399upm4rd');
+  </script>
+  <!-- End of Async Drift Code -->
+  
+  <head>
+    <title>Park Spot</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="/table.css">
+    <link rel="stylesheet" href="/info.css">
+    <script src="/script.js" defer></script>
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-33205505-7"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-33205505-7');
+    </script>
+    
+  </head>
+  <body>
+  <div class="header">
+    <h2>Find your parking spot...</h2>
+  </div>
+    <form class="opened" onsubmit="search(); return false;" autocomplete="off">
+      <input type="search" placeholder="Zip code, city or street" id="searchQuery">
+      <button>
+        <span id="searchButton"></span>
+      </button>
+    </form>
+    
+    <div id="overlay"></div>
+    <div id="popup">
+      <div class="popupcontrols">
+        <span id="popupclose">X</span>
+      </div>
+      <div class="popupcontent">
+        <h2>
+          What is Park Spot?
+        </h2>
+          We connect the driver who is looking for a free parking spot with people who live around the area. 
+          We offer a service to find available parking space in cities where it is hard to find public street parking spots.
+        <h2>
+          Get started?
+        </h2>
+          Just search on street name or zip code and all available spots around your destination will be displayed.
+        <h2>
+          How does it work?
+        </h2>
+          Park Spot works with people who living in the city and crowdsource the information. If someone sees a free spot the spot can be added to the website. 
+          Of course there will be a reward for adding free spots.
+        <h2>
+          How much will it cost?
+        </h2>
+          The first months will be free. But after that we will let user get subscription based on there needs, such as package per month based on their needs. 
+          Yes we are looking into unlimited package deals as well. 
+        <h2>
+          I do not see a free spot?
+        </h2>
+          No worries, we are working on a request function. This will notify someone nearby and can tell you if there is a space around your destination.
+        <h2>
+          Can I make money as contributer?
+        </h2>
+          Yes, we understand that we should encourage contribution. We are currently looking into pay out details but this will most likely based on your contribution.
+          So making more contribution will get you more money. We also working on request function and thus a bigger reward.
+        <h2>
+          Status?
+        </h2>
+          Currently Park Spot is in development and all data is fake. Leave your <a href="https://goo.gl/forms/dhJWZchFqjtJp8Wn2" target="_blanc">email</a> and we will notify once we are live.
+        <h2>
+          Contact?
+        </h2>          
+          We are looking for testers who want to contribute and earn some money. But also drivers who need a free space for their car.
+          Please feel free to contact us via <a href="mailto:feedbackandroid@gmail.com?Subject=Park Spot" target="_top">email</a>.
+          <br><br>
+        <p>
+          <a onclick="javascript:closePopup();" id="close_button" class="info-button">close</a>
+        </p>
+      </div>
+    </div>
+    
+    <div class="container">
+      <ul class="responsive-table" id="queryResult">
+      </ul>
+    </div>
+  <div class="footer">
+    <h1>
+      <a href="https://goo.gl/forms/dhJWZchFqjtJp8Wn2" target="_blanc" class="notify-link">Get notified</a>
+    </h1>
+    <p>prototype in development... <a onclick="openPopup()" id="info_button" class="info-button">Info</a></p>
+  </div>
+  </body>
+</html>

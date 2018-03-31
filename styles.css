@@ -1,0 +1,140 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+
+:root {
+  --background-color: #003746;
+  --search-color: #FF5219;
+  --search-button-color: #FF5219;
+  --table-header: #FF5219;
+  --table-row: #FFF;
+  --footer-background: #003746;
+  --body-background: #003746;
+  --footer-text: #FFF;
+  --header-background: #003746;
+  --header-text: #FFF;
+  --header-text-color: #FFF;
+  --row-text-color: #000;
+  --info-button-color: #4CAF50;
+  --info-button-color-text: #FFF;
+}
+
+body {  
+  font-family: 'lato', sans-serif;
+  margin-top: 70px;
+  margin-bottom: 100px;
+  background: var(--background-color) url(https://cdn.glitch.com/547ca242-c982-433f-b57a-660f61ce955b%2Fbike_street_sidewalk_cars_parking_57304_3840x1200.jpg?1522497408098) no-repeat center center fixed;
+/*   background-color: var(--body-background); */
+/*   background-image: url(https://cdn.glitch.com/547ca242-c982-433f-b57a-660f61ce955b%2Fbike_street_sidewalk_cars_parking_57304_3840x1200.jpg?1522497408098) no-repeat center center fixed;  */
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+form {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  overflow: hidden;
+	transition: width 0.5s;
+  margin: auto;
+	-webkit-backface-visibility: hidden;
+}
+
+form.opened {
+  width: 330px;
+}
+form.opened:before {
+  position: fixed;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+input[type="search"] {
+  user-select: none;
+  position: absolute;
+  top: 0; 
+  right: 28px;
+  height: 60px;
+  width: 0;
+  float:left;
+  font-size: 1.5em;
+  border-radius: 30px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  outline: none;
+  border: none;
+  padding-left: 20px;
+  color: var(--search-color);
+	transition: width 0.5s;
+}
+
+form.opened input[type="search"] {
+  width: 300px;
+	transition: width 0.5s;
+}
+
+button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 60px;
+  height: 60px;
+  background: var(--search-button-color);
+  border: none;
+  border-radius: 30px;
+  font-size: 1.3em;
+  outline: none;
+  cursor: pointer;
+}
+
+form.opened button {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.query-result {
+  width: 100%;
+  text-align: center;
+  list-style: none;
+  font-size: 1.5em;
+  display:inline-block;  
+  padding: 0 5px 3px 0;
+}
+
+.list-item {
+  background: var(--search-button-color);
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  padding-bottom:10px;
+  padding-top:10px;
+  width: 100%;
+  background-color: var(--footer-background);
+  color: var(--footer-text);
+  text-align: center;
+}
+
+.header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  padding-bottom:10px;
+  padding-top:10px;
+  width: 100%;
+  background-color: var(--header-background);
+  color: var(--header-text);
+  text-align: center;
+}
+.notify-link {
+  color: var(--header-text);
+}
